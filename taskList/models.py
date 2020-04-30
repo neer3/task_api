@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 
 
 class Task_List(models.Model):
-    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
     name = models.CharField(default=" ", max_length=50)
     startDate = models.DateField(auto_now=False, auto_now_add=False)
     endDate = models.DateField(auto_now=False, auto_now_add=False)
